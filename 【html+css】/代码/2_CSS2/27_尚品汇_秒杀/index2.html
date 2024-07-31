@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input Value Example</title>
+</head>
+<body>
+<form>
+	<label for="username">Username:</label>
+	<input type="text" id="username" name="username">
+	<button type="button" onclick="displayValue()">Get Value</button>
+</form>
+<script>
+function displayValue () {
+	var username = document.getElementById('username').value;
+	alert('Current value: ' + username);
+}
+</script>
+</body>
+</html>

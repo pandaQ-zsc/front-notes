@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #div1 {
+            background-color: skyblue;
+            color: blue;
+            font-size: 100px;
+            /*height: 300px;*/
+            line-height: 20px;
+        }
+
+        /*ul>li:nth-of-type(2){*/
+        /*    color: red;*/
+        /*}*/
+
+        ul > li:nth-child(2) {
+            color: red;
+        }
+
+        div {
+            background-color: grey;
+            height: 300px;
+            margin: 20px;
+        }
+
+        div:target {
+            background-color: green;
+        }
+
+        div p span {
+            color: rgba(255, 0, 0, 0.89);
+        }
+
+        ul {
+            list-style-type: decimal;
+            list-style-position: inside;
+        }
+        li{
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<br>
+<a href="#one">去看第一个</a>
+<a href="#two">去看第二个</a>
+<a href="#tree">去看第三个</a>
+<a href="#four">去看第四个</a>
+<div id="div1">Hello world</div>
+<p>At Mozilla, we're a global community of</p>
+<marquee behavior="" direction="">张三：1111</marquee>
+<ul>
+    <li>technologists</li>
+    <li>thinkers</li>
+    <li>builders</li>
+</ul>
+<p>working together…</p>
+<div id="one">1</div>
+<div id="two">2</div>
+<div id="six">6</div>
+<div id="tree">3</div>
+<div id="four">4</div>
+<div>
+    <p><span>1231</span>
+        <br>
+        <span>4545</span>
+        <span>4545</span>
+        <span>4545</span>
+    </p>
+    <p><span>12312</span>
+        <span>12312</span>
+    </p>
+
+    <p>123123</p>
+
+</div>
+</body>
+</html>
+
