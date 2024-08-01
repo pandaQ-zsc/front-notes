@@ -1,10 +1,8 @@
-import {name,motto,getTel} from './student.js'
+import { getTel, motto, name } from './student.js'
 
 console.log(name)
 console.log(motto)
 console.log(getTel())
-
-
 
 // import xyz,{name,slogan} from './school.js'
 
