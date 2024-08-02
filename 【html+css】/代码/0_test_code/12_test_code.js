@@ -77,4 +77,58 @@ let regex2 = new RegExp('xyz', 'i')
 let regex4 = /\b(\w+)\s+\1\b/
 
 console.log('hello world'.replace(/(\w+)\s(\w+)/, '$2 $1'))
+
 // "world hello"
+
+function checkNumber (num) {
+  if (typeof num !== 'number') {
+    throw new Error('The provided value is not a number')
+  }
+  return num
+}
+
+try {
+  try {
+    throw new Error('1111111')
+  } finally {
+    console.log('Finally')
+  }
+  console.log('Will I run?')
+} catch (error) {
+  console.error(error.message)
+}
+// 如果对象的属性是undefined、函数或 XML 对象，该属性会被JSON.stringify()过滤。
+let objJson = {
+  a: undefined,
+  b: function () {
+
+  },
+}
+console.log(JSON.stringify(objJson))
+//如果数组的成员是undefined、函数或 XML 对象，则这些值被转成null。
+let arrJson = [1, undefined, function () {}, 3]
+console.log(JSON.stringify(arrJson))
+
+//JSON.stringify()方法会忽略对象的不可遍历的属性。
+let objProperty = {}
+Object.defineProperties(objProperty, {
+  'foo': {
+    value: 1,
+    enumerable: true,
+  },
+  'bar': {
+    value: 3,
+    enumerable: false,
+  },
+})
+console.log(JSON.stringify(objProperty))
+
+//toJSON()方法的应用： 将正则对象自动转化为字符串
+let regObj = {
+  reg: /foo/,
+}
+console.log(JSON.stringify(regObj))
+
+RegExp.prototype.toJSON = RegExp.prototype.toString
+console.log(JSON.stringify(regObj))
+
