@@ -34,6 +34,10 @@ class User {
 	}
 }
 
+
+
+// 实例化对象
+// 这里的User是经过装饰器处理过的类
 const user1 = new User('张三', 13);
 user1.speak()
 console.log(user1.getTime())
